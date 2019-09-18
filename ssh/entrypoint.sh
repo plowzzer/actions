@@ -10,10 +10,12 @@ mkdir -p "$SSH_PATH"
 touch "$SSH_PATH/known_hosts"
 
 echo "$PRIVATE_KEY" > "$SSH_PATH/deploy_key"
+echo "$PUBLIC_KEY" > "$SSH_PATH/deploy_key.pub"
 
 sudo chmod 700 "$SSH_PATH"
 sudo chmod 600 "$SSH_PATH/known_hosts"
 sudo chmod 600 "$SSH_PATH/deploy_key"
+sudo chmod 600 "$SSH_PATH/deploy_key.pub"
 
 eval $(ssh-agent)
 ssh-add "$SSH_PATH/deploy_key"
