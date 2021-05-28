@@ -14,7 +14,7 @@ runs:
     shell: bash
 
   - name: Test application
-    run: npm run test
+    run: npm run test:ci
     shell: bash
 
   - name: Build
