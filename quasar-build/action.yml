@@ -13,9 +13,9 @@ runs:
     run: npm run lint
     shell: bash
 
-  - name: Test application
-    run: npm run test:ci
-    shell: bash
+#   - name: Test application
+#     run: npm run test:ci
+#     shell: bash
 
   - name: Build
     run: npm run build
